@@ -1,9 +1,9 @@
-package com.tenclouds.fluidbottomnavigation.util;
+﻿package com.tenclouds.fluidbottomnavigation.util;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.annotation.FontRes;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import androidx.core.content.res.ResourcesCompat;
 

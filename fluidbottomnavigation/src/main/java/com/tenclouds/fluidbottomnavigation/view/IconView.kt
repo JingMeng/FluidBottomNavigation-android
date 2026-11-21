@@ -29,10 +29,10 @@ internal class IconView @JvmOverloads constructor(context: Context,
                             selectMoveAnimator,
                             selectTintAnimator)
                     addListener(object : Animator.AnimatorListener {
-                        override fun onAnimationRepeat(animation: Animator?) = Unit
-                        override fun onAnimationEnd(animation: Animator?) = Unit
-                        override fun onAnimationCancel(animation: Animator?) = Unit
-                        override fun onAnimationStart(animation: Animator?) {
+                        override fun onAnimationRepeat(animation: Animator) = Unit
+                        override fun onAnimationEnd(animation: Animator) = Unit
+                        override fun onAnimationCancel(animation: Animator) = Unit
+                        override fun onAnimationStart(animation: Animator) {
                             deselectTintAnimator.cancel()
                             setTintColor(selectColor)
                         }

@@ -3,12 +3,18 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions { jvmTarget = '11' }
+    namespace 'com.tenclouds.fluidbottomnavigationexample'
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.tenclouds.fluidbottomnavigationexample"
-        minSdkVersion 15
-        targetSdkVersion 29
+        minSdk 15
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
@@ -19,6 +25,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    
     }
 }
 
@@ -32,3 +39,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidx_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
 }
+
+
+
+
